@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+          http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+    <persistence-unit name="ExamAPI">
+        <class>com.example.theexamapi.entity.TStreamEntity</class>
+        <class>com.example.theexamapi.entity.TCourseEntity</class>
+        <class>com.example.theexamapi.entity.TDepartmentEntity</class>
+        <class>com.example.theexamapi.entity.TClassEntity</class>
+        <class>com.example.theexamapi.entity.TStream</class>
+        <class>com.example.theexamapi.models.TCourseEntity</class>
+        <class>com.example.theexamapi.models.TDepartmentEntity</class>
+        <class>com.example.theexamapi.models.TClassEntity</class>
+        <class>com.example.theexamapi.models.TDepartmentClassMappingEntity</class>
+        <class>com.example.theexamapi.models.TSemesterEntity</class>
+        <class>com.example.theexamapi.models.TDepartmentClassMapSemesterMappingEntity</class>
+        <class>com.example.theexamapi.models.TSubjectEntity</class>
+        <class>com.example.theexamapi.models.TExamEntity</class>
+        <class>com.example.theexamapi.models.TQuestionEntity</class>
+        <class>com.example.theexamapi.models.TMcqOptionEntity</class>
+        <class>com.example.theexamapi.models.TExamQuestionMappingEntity</class>
+        <!--        <class>com.example.theexamapi.models.TStreamEntity</class>-->
+        <!--        <class>com.example.theexamapi.models.TCourseEntity</class>-->
+        <!--        <class>com.example.theexamapi.models.TDepartmentEntity</class>-->
+        <properties>
+            <!--            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/the_exam_api?createDatabaseIfNotExist=true" />-->
+            <property name="javax.persistence.jdbc.user" value="gipl"/>
+            <property name="javax.persistence.jdbc.password" value="gipl@123"/>
+            <!--            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/exam_api_db"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <!--                        <property name="hibernate.hbm2ddl.auto" value="create" />-->
+            <property name="hibernate.c3p0.min_size" value="10"/>
+        </properties>
+    </persistence-unit>
+</persistence>
